@@ -6,6 +6,7 @@
     --spacing-sm: calc(1rem + .2vw);
     --spacing-md: calc(1rem + 1vw);
     --spacing-12: 12px;
+    --spacing-16: 16px;
     --spacing-24: 24px;
     --spacing-36: 36px;
 }
@@ -38,4 +39,23 @@ svg.target{
     justify-content: end;
     align-items: center;
     gap: var(--spacing-12)
+}
+
+/*---------------------------------------------*\
+    #FOOTER
+\*---------------------------------------------*/
+.footer{
+    color: white;
+    background-color: var(--primary);
+    position: absolute;
+    bottom: 0;
+    padding: var(--spacing-sm) var(--spacing-md);
+    display: flex;
+    justify-content: space-between;    
+}
+.footer address{
+    margin-bottom: 0;
+}
+a[rel="author"]{
+    color: var(--cta)
 }
