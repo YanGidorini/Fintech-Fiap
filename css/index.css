@@ -1,3 +1,5 @@
+@import url("./mobile-menu.css");
+
 :root{
     --primary: #12263A;
     --cta: #12DC8B;
@@ -29,7 +31,7 @@
     gap: calc(var(--spacing-12) + 1vw);
     justify-content: center;
 }
-svg.target{
+.header .target{
     fill: none;
     width: var(--target-icon-size);
     height: var(--target-icon-size);
@@ -38,7 +40,8 @@ svg.target{
     display: flex;
     justify-content: end;
     align-items: center;
-    gap: var(--spacing-12)
+    gap: var(--spacing-12);
+    text-align: end;
 }
 
 /*---------------------------------------------*\
@@ -48,7 +51,7 @@ svg.target{
     color: white;
     background-color: var(--primary);
     position: absolute;
-    bottom: 0;
+    bottom: 0; right: 0;
     padding: var(--spacing-sm) var(--spacing-md);
     display: flex;
     justify-content: space-between;    
@@ -56,6 +59,50 @@ svg.target{
 .footer address{
     margin-bottom: 0;
 }
-a[rel="author"]{
-    color: var(--cta)
+.footer a[rel="author"]{
+    color: var(--cta);
+}
+.footer a[rel="author"]:hover{
+    color: #0d6efd;
+}
+/*---------------------------------------------*\
+    #MOBILE-MENU
+\*---------------------------------------------*/
+.mobile-menu{
+    padding: var(--spacing-16);
+    background-color: var(--primary);
+    box-shadow: 0px -4px 6px rgba(0, 0, 0, 0.25);
+    position: fixed;
+    bottom: 0; right: 0;
+    text-align: center;
+    width: 100%;
+}
+.mobile-menu svg{
+    fill: white;
+    height: calc(var(--icon-size) + 2px);
+    width: calc(var(--icon-size) + 2px);
+}
+.mobile-menu .target{
+    fill: none;
+    width: var(--target-icon-size);
+    height: var(--target-icon-size);
+}
+.mobile-menu_add{
+    background-color: var(--cta);
+    text-decoration: none;
+    color: white;
+    display: block;
+    border-radius: 50%;
+    height: 56px;
+    width: 56px;
+    text-align: center;
+    line-height: 50px;
+    font-size: 1.5rem;
+    position: absolute;
+    bottom: 50%; right: var(--spacing-16);
+    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.1);
+}
+.mobile-menu_add:hover{
+    color: white;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
 }
