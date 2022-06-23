@@ -4,6 +4,7 @@
     --font-family-default: 'Inter', sans-serif;
     --primary: #12263A;
     --cta: #12DC8B;
+    --light-cta: hsl(156, 85%, 70%);
     --icon-size: calc(20px + 1.2vw);
     --target-icon-size: calc(20px + .9vw);
     --spacing-sm: calc(1rem + .2vw);
@@ -13,6 +14,9 @@
     --spacing-24: 24px;
     --spacing-36: 36px;
     --padding-btn-add: calc(calc(var(--spacing-16)/2) + .55vw);
+    --glow: 0px 0px 10px hsl(156, 85%, 60%);
+    --shadow-default: 0px 5px 20px rgba(0, 0, 0, 0.25);
+    --shadow-default-hover: 0px 5px 10px rgba(0, 0, 0, 0.25);
 }
 body{
     font-family: var(--font-family-default);
@@ -27,10 +31,16 @@ body{
     padding: var(--spacing-sm) var(--spacing-md);
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.25);
 }
-.header svg{
+.header_nav-item,
+.header_account-photo
+{
     fill: white;
     height: var(--icon-size);
     width: var(--icon-size);
+}
+.header_nav-item:hover{
+    fill: var(--light-cta);
+    filter: drop-shadow(var(--glow));
 }
 .header_nav{
     display: none;
@@ -42,12 +52,34 @@ body{
     width: var(--target-icon-size);
     height: var(--target-icon-size);
 }
+.header .target:hover circle{
+    stroke: var(--light-cta);
+}
+.header .target:hover circle:last-child{
+    fill: var(--light-cta);
+}
 .header_account{
     display: flex;
     justify-content: end;
     align-items: center;
-    gap: var(--spacing-12);
     text-align: end;
+}
+.header_account:hover {
+    filter: drop-shadow(var(--glow));
+}
+.header_account:hover a{
+    color: var(--light-cta);
+}
+.header_account:hover .header_account-photo{
+    fill: var(--light-cta);
+}
+
+.header_account a{
+    color: white;
+    text-decoration: none;
+}
+.header_account a > span{
+    margin-right: calc(var(--spacing-12) - 4.8px);
 }
 
 /*---------------------------------------------*\
@@ -83,15 +115,25 @@ body{
     text-align: center;
     width: 100%;
 }
-.mobile-menu svg{
+.mobile-menu_item{
     fill: white;
     height: calc(var(--icon-size) + 2px);
     width: calc(var(--icon-size) + 2px);
+}
+.mobile-menu_item:hover{
+    fill: var(--light-cta);
+    filter: drop-shadow(var(--glow));
 }
 .mobile-menu .target{
     fill: none;
     width: var(--target-icon-size);
     height: var(--target-icon-size);
+}
+.mobile-menu .target:hover circle{
+    stroke: var(--light-cta);
+}
+.mobile-menu .target:hover circle:last-child{
+    fill: var(--light-cta);
 }
 .mobile-menu_add{
     background-color: var(--cta);
@@ -106,7 +148,7 @@ body{
     font-size: 1.5rem;
     position: absolute;
     bottom: 50%; right: var(--spacing-16);
-    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
 }
 .mobile-menu_add:hover{
     color: white;
@@ -117,6 +159,7 @@ body{
 \*---------------------------------------------*/
 .dashboard{
     margin-top: calc(1rem + 3vw);
+    margin-bottom: calc(1rem + 3vw);
 }
 .dashboard_add a{
     color:white;
@@ -125,5 +168,8 @@ body{
     padding: var(--padding-btn-add) calc(var(--padding-btn-add) * 2);
     background-color: var(--cta);
     border-radius: 10px;
-    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.25);
+    box-shadow: var(--shadow-default);
+}
+.dashboard_add a:hover{
+    box-shadow: var(--shadow-default-hover);
 }
