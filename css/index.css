@@ -1,6 +1,7 @@
-@import url("./mobile-menu.css");
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
 
 :root{
+    --font-family-default: 'Inter', sans-serif;
     --primary: #12263A;
     --cta: #12DC8B;
     --icon-size: calc(20px + 1.2vw);
@@ -11,6 +12,11 @@
     --spacing-16: 16px;
     --spacing-24: 24px;
     --spacing-36: 36px;
+    --padding-btn-add: calc(calc(var(--spacing-16)/2) + .55vw);
+}
+body{
+    font-family: var(--font-family-default);
+    font-size: calc(1rem + .1vw);
 }
 /*---------------------------------------------*\
     #HEADER
@@ -105,4 +111,19 @@
 .mobile-menu_add:hover{
     color: white;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+/*---------------------------------------------*\
+    #DASHBOARD
+\*---------------------------------------------*/
+.dashboard{
+    margin-top: calc(1rem + 3vw);
+}
+.dashboard_add a{
+    color:white;
+    text-decoration: none;
+    display: inline-block;
+    padding: var(--padding-btn-add) calc(var(--padding-btn-add) * 2);
+    background-color: var(--cta);
+    border-radius: 10px;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.25);
 }
