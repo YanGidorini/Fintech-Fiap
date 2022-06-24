@@ -17,6 +17,8 @@
     --glow: 0px 0px 10px hsl(156, 85%, 60%);
     --shadow-default: 0px 5px 20px rgba(0, 0, 0, 0.25);
     --shadow-default-hover: 0px 5px 10px rgba(0, 0, 0, 0.25);
+    --receita-color: #03AD00;
+    --despesa-color: #BB0000;
 }
 body{
     font-family: var(--font-family-default);
@@ -160,6 +162,12 @@ body{
 .dashboard{
     margin-top: calc(1rem + 3vw);
     margin-bottom: calc(1rem + 3vw);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.dashboard_add {
+    margin-bottom: calc(1rem + 3vw);
 }
 .dashboard_add a{
     color:white;
@@ -172,4 +180,43 @@ body{
 }
 .dashboard_add a:hover{
     box-shadow: var(--shadow-default-hover);
+}
+
+
+.dashboard_saldo img{
+   display: none;
+}
+.dashboard_mes {
+    margin: 0;
+}
+.dashboard_card{
+    background-color: white;
+    box-shadow: var(--shadow-default);
+    border-radius: 5px;
+    overflow: hidden;
+    text-align: center;
+}
+.dashboard_card > p {
+    padding: 0 1rem;
+}
+.dashboard_card--positivo {
+    color: var(--receita-color);
+}
+.dashboard_card--negativo {
+    color: var(--despesa-color);
+}
+.dashboard_card-tag {
+    color:white;
+}
+.dashboard_card-tag--positivo{
+    background-color: var(--receita-color);
+}
+.dashboard_card-tag--negativo{
+    background-color: var(--despesa-color);
+}
+.dashboard_card-icon {
+    fill: white;
+    width: var(--icon-size);
+    height: var(--icon-size);
+    margin-right: calc(var(--spacing-12) - 5px);
 }
