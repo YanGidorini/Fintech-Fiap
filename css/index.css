@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
 
+
+/*---------------------------------------------*\
+    #ROOT
+\*---------------------------------------------*/
 :root{
     --font-family-default: 'Inter', sans-serif;
     --primary: #12263A;
@@ -20,10 +24,19 @@
     --receita-color: #03AD00;
     --despesa-color: #BB0000;
 }
+html {
+    height: 100%;
+    min-height: 100%;
+}
 body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
     font-family: var(--font-family-default);
     font-size: calc(1rem + .1vw);
 }
+
+
 /*---------------------------------------------*\
     #HEADER
 \*---------------------------------------------*/
@@ -84,17 +97,15 @@ body{
     margin-right: calc(var(--spacing-12) - 4.8px);
 }
 
+
 /*---------------------------------------------*\
     #FOOTER
 \*---------------------------------------------*/
 .footer{
+    margin-top: auto;
     color: white;
     background-color: var(--primary);
-    position: absolute;
-    bottom: 0; right: 0;
-    padding: var(--spacing-sm) var(--spacing-md);
-    display: flex;
-    justify-content: space-between;    
+    padding: var(--spacing-sm) var(--spacing-md);  
 }
 .footer address{
     margin-bottom: 0;
@@ -105,6 +116,14 @@ body{
 .footer a[rel="author"]:hover{
     color: #0d6efd;
 }
+ @media (max-width: 575px) {
+    .footer {
+        position: relative;
+        padding-bottom: calc(var(--spacing-md) * 4);
+    }
+ }
+
+
 /*---------------------------------------------*\
     #MOBILE-MENU
 \*---------------------------------------------*/
@@ -156,6 +175,61 @@ body{
     color: white;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
 }
+
+
+
+/*---------------------------------------------*\
+    #ADD-BUTTON
+\*---------------------------------------------*/
+.add {
+    color: white;
+    text-decoration: none;
+    position: fixed;
+    bottom: 3rem; right: 3rem;
+    display: flex;
+}
+.add span {
+    position: absolute;
+    top: 0; right: calc(100% - 4rem);
+    display: flex;
+    align-items: center;
+    background-color: var(--cta);
+    height: 4.65rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 2.25rem 2.25rem;
+    padding: 0 2rem;
+    z-index: -1;
+    opacity: 0;
+    pointer-events: none;
+    transition: all .5s ease;
+}
+.add_circle {
+    background-color: var(--cta);
+    border-radius: 50%;
+    padding: 1.5rem;
+    box-shadow: var(--shadow-default);
+    transition: all .5s ease;
+}
+.add_circle img {
+    height: 1.5rem;
+    width: 1.5rem;
+}
+.add:hover {
+    color: white;
+    filter: drop-shadow(var(--shadow-default-hover));
+}
+.add:hover .add_circle {
+    box-shadow: none;
+}
+.add:hover span {
+    opacity: 1;
+    pointer-events: all;
+    right: calc(100% - 2rem);
+    border-radius: 2.25rem 0 0 2.25rem;
+}
+
+
 /*---------------------------------------------*\
     #DASHBOARD
 \*---------------------------------------------*/
@@ -165,26 +239,6 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: center;
-}
-.dashboard_add {
-    margin-bottom: calc(1rem + 3vw);
-}
-.dashboard_add a{
-    color:white;
-    text-decoration: none;
-    display: inline-block;
-    padding: var(--padding-btn-add) calc(var(--padding-btn-add) * 2);
-    background-color: var(--cta);
-    border-radius: 10px;
-    box-shadow: var(--shadow-default);
-}
-.dashboard_add a:hover{
-    box-shadow: var(--shadow-default-hover);
-}
-
-
-.dashboard_saldo img{
-   display: none;
 }
 .dashboard_mes {
     margin: 0;

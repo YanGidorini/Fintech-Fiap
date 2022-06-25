@@ -74,11 +74,8 @@
     </header>
     
     <main class="dashboard container-lg py-3 py-md-0">
-        <section class="d-none d-sm-flex text-center justify-content-center dashboard_add">
-            <a href="./adicionar.html">Adicionar</a>
-        </section>
 
-        <section class="row dashboard_saldo mt-lg-0 mx-lg-auto gy-2 gy-md-3 align-items-center">
+        <section class="row mt-lg-0 mx-lg-auto gy-2 gy-md-3 align-items-center">
 
             <p class="dashboard_mes">MÊS DE ABRIL</p>
 
@@ -101,7 +98,7 @@
                 </div>
             </div>
 
-            <img src="./icons/minus.svg" alt="" class="col-md-1 d-md-block"/>
+            <img src="./icons/minus.svg" alt="" class="col-md-1 d-none d-md-block"/>
 
             <div class="col-md">
                 <div class="dashboard_card d-flex justify-content-between d-md-block">
@@ -122,7 +119,7 @@
                 </div>
             </div>
 
-            <img src="./icons/equal.svg" alt="" class="col-md-1 d-md-block" />
+            <img src="./icons/equal.svg" alt="" class="col-md-1 d-none d-md-block" />
 
             <div class="col-md">
                 <div id="saldo" class="dashboard_card dashboard_card--positivo d-flex flex-column d-md-block">
@@ -133,13 +130,27 @@
                 </div>
             </div>
         </section>
-           
-
-            
+                  
         </section>
 
-        <section class="dashboard_despesa">
+        <section class="row mt-5 mx-lg-auto">
+            <div class="col-md">
+                <div class="dashboard_despesa">
+                    <p>ÚLTIMA DESPESA</p>
+                    <p class="dashboard_despesa-datetime d-flex justify-content-between">Terça-feira, 19 de Abril <time>16:30</time></p>
+                    <div class="dashboard_card">
+                        <div class="dashboard_despesa-categoria"></div>
+                        <div class="dashboard_despesa-descricao d-flex justify-content-between p-3">
+                            <span>Netflix</span>
+                            <span>- R$ 54,00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
+            <div class="col-md">
+
+            </div>
         </section>
 
         <section class="dashboard_investimentos">
@@ -147,7 +158,7 @@
         </section>
     </main>
 
-    <footer class="footer container-fluid">
+    <footer class="footer container-fluid d-flex justify-content-between">
         <address>Feito por <a href="https://www.linkedin.com/in/yan-gidorini-049978235/" rel="author" target="_blank">Yan Gidorni Silva</a></address>
         <span>RM96190</span>
     </footer>
@@ -194,6 +205,13 @@
 			<a href="./adicionar.html" class="mobile-menu_add">&plus;</a>
 		</div>
     </nav>
+
+    <a href="./adicionar.html" class="add d-none d-sm-block">
+        <div class="add_circle">
+            <img src="./icons/mais.png">
+        </div>
+        <span>Adicionar</span>
+    </a>
 
     <script src="./css/bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
 </body>
