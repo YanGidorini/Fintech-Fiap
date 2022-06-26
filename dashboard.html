@@ -73,8 +73,7 @@
         </div>
     </header>
     
-    <main class="dashboard container-lg py-3 py-md-0">
-
+    <main class="dashboard container-sm py-3 py-md-0">
         <section class="row mt-lg-0 mx-lg-auto gy-2 gy-md-3 align-items-center">
 
             <p class="dashboard_mes">MÊS DE ABRIL</p>
@@ -82,7 +81,7 @@
             <div class="col-md ">
                 <div class="dashboard_card d-flex justify-content-between d-md-block">
                     <p class="col-auto order-1 my-2 py-1 my-md-2">R$ 5.238,00</p>
-                    <div class="dashboard_card-tag dashboard_card-tag--positivo d-flex d-md-block align-items-center px-2 px-sm-3 px-md-0 py-md-1">
+                    <div class="dashboard_card-tag tag--positive d-flex d-md-block align-items-center px-2 px-sm-3 px-md-0 py-md-1">
                         <svg class="dashboard_card-icon revenue" width="37" height="26" viewBox="0 0 37 26" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g clip-path="url(#clip0_767_380)">
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M35.2248 9.5188L36.4747 0.9729L28.1687 3.34048L30.546 5.42206L20.0487 17.2223L13.6017 10.7753L1.51352 22.8796L3.93115 25.2972L13.6017 15.6106L20.0487 22.0576L32.9602 7.53591L35.2248 9.5188Z" />
@@ -103,7 +102,7 @@
             <div class="col-md">
                 <div class="dashboard_card d-flex justify-content-between d-md-block">
                     <p class="my-2 py-1 my-md-2">R$ 4.560,00</p>
-                    <div class="dashboard_card-tag dashboard_card-tag--negativo d-flex d-md-block align-items-center px-2 px-sm-3 px-md-0 py-md-1">
+                    <div class="dashboard_card-tag tag--negative d-flex d-md-block align-items-center px-2 px-sm-3 px-md-0 py-md-1">
                         <svg class="dashboard_card-icon spent" width="37" height="26" viewBox="0 0 37 26" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g clip-path="url(#clip0_767_376)">
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M34.279 16.7516L35.5288 25.2975L27.2229 22.9299L29.6002 20.8483L19.1027 9.04795L12.6557 15.495L0.567596 3.3907L2.98522 0.973076L12.6557 10.6597L19.1027 4.2127L32.0144 18.7345L34.279 16.7516Z" />
@@ -122,39 +121,60 @@
             <img src="./icons/equal.svg" alt="" class="col-md-1 d-none d-md-block" />
 
             <div class="col-md">
-                <div id="saldo" class="dashboard_card dashboard_card--positivo d-flex flex-column d-md-block">
+                <div id="saldo" class="dashboard_card text-color--positive d-flex flex-column d-md-block">
                     <p class="my-2 my-md-3 order-1">+ R$ 768,00</p>
-                    <div class="dashboard_card-tag dashboard_card-tag--positivo py-0 py-md-2">
+                    <div class="dashboard_card-tag tag--positive py-0 py-md-2">
                         <span>Saldo</span>
                     </div>
                 </div>
             </div>
-        </section>
-                  
-        </section>
+        </section>             
 
-        <section class="row mt-5 mx-lg-auto">
-            <div class="col-md">
+        <section class="row mt-5 justify-content-center">
+            <div class="col-md-6 col-lg-5 col-xl-4 col-xxl-3 me-lg-4 me-xl-1 me-xxl-0">
                 <div class="dashboard_despesa">
                     <p>ÚLTIMA DESPESA</p>
-                    <p class="dashboard_despesa-datetime d-flex justify-content-between">Terça-feira, 19 de Abril <time>16:30</time></p>
-                    <div class="dashboard_card">
-                        <div class="dashboard_despesa-categoria"></div>
-                        <div class="dashboard_despesa-descricao d-flex justify-content-between p-3">
+                    <p class="dashboard_despesa-datetime d-flex justify-content-between mb-2 font-color-1">Terça-feira, 19 de Abril <time>16:30</time></p>
+                    <div class="dashboard_card position-relative">
+                        <div class="categoria position-absolute" style="background-color:#1000C8"></div>
+                        <div class="dashboard_despesa-descricao d-flex justify-content-between p-3 ps-4">
                             <span>Netflix</span>
-                            <span>- R$ 54,00</span>
+                            <span class="text-color--negative">- R$ 54,00</span>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="col-md">
+            <div class="col-md-6 col-lg-4 col-xl-4 col-xxl-4 mt-5 mt-md-0">
+                <p>ÚLTIMO OBJETIVO</p>
+                <div class="dashboard_objetivo">
+                    <div class="d-flex justify-content-between mb-2">
+                        <span>R$ 35.000,00</span>
+                        <span class="font-color-1">Até 12/2023</span>
+                    </div>
 
+                    <div class="objetivo_card p-3">
+                        <p class="text-start">Compar carro novo</p>
+                        <p class="text-end objetivo_valor-atual">R$ 14.500,00</p>
+                        <progress value="50" max="100"></progress>
+                        <p class="text-start font-color-0 objetivo_percentual">50%</p>
+                    </div>
+
+                </div>
             </div>
         </section>
 
-        <section class="dashboard_investimentos">
-
+        <section class="row mt-5 justify-content-center">
+            <div class="col-md-6 col-lg-5 col-xl-4 col-xxl-3 me-lg-4 me-xl-1 me-xxl-0">
+                <div class="dashboard_investimento">
+                    <p>TOTAL EM INVESTIMENTOS</p>
+                    <div class="dashboard_card py-3 px-4">
+                        <svg class="dashboard_investimento-icon investment" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M5 9.2h3V19H5V9.2zM10.6 5h2.8v14h-2.8V5zm5.6 8H19v6h-2.8v-6z"/></svg>
+                        <span class="ms-3">R$ 4.700,00</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 col-xl-4 col-xxl-4"></div>
         </section>
     </main>
 
