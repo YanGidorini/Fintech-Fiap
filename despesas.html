@@ -73,8 +73,174 @@
         </div>
     </header>
     
-    <main class="dashboard container">
+    <main class="despesas container-sm">
+        <div class="row despesas_categorias justify-content-center mb-4">
+            <div class="col-lg-8">
+                <p class="title">Categorias</p>
 
+                <div class="row ">
+                    <div class="col-6 col-sm-4 col-xl-3 d-flex align-items-center">
+                        <div class="categoria_tag categoria_tag--aluguel"></div>Aluguel
+                    </div>
+                    <div class="col-6 col-sm-4 col-xl-3 d-flex align-items-center">
+                        <div class="categoria_tag categoria_tag--alimentacao"></div>Alimentação
+                    </div>
+                    <div class="col-6 col-sm-4 col-xl-3 d-flex align-items-center">
+                        <div class="categoria_tag categoria_tag--lazer"></div>Lazer
+                    </div>
+                    <div class="col-6 col-sm-4 col-xl-3 d-flex align-items-center">
+                        <div class="categoria_tag categoria_tag--educacao"></div>Educação
+                    </div>
+                    <div class="col-6 col-sm-4 col-xl-3 d-flex align-items-center">
+                        <div class="categoria_tag categoria_tag--transporte"></div>Transporte
+                    </div>
+                    <div class="col-6 col-sm-4 col-xl-3 d-flex align-items-center">
+                        <div class="categoria_tag categoria_tag--casa"></div>Casa
+                    </div>
+                    <div class="col-6 col-sm-4 col-xl-3 d-flex align-items-center">
+                        <div class="categoria_tag categoria_tag--saude"></div>Saúde
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <p class="title mb-0">Despesas</p>
+            </div>
+        </div>
+
+        <div class="row justify-content-center mt-3">
+            <div class="col-lg-8">
+                <p class="d-flex justify-content-between py-3 mes_vigente my-0">ABRIL <span>R$4.560,00</span></p>
+
+                <div class="despesas_despesa mt-3">
+                    <p class="d-flex justify-content-between mb-2 font-color-1">Terça-feira, 19 de Abril <time>16:30</time></p>
+                    <div class="row">
+                        <div class="col-sm">
+                            <div class="card-default position-relative">
+                                <div class="categoria_tag-inline categoria_tag--lazer position-absolute"></div>
+                                <div class="d-flex justify-content-between p-3 ps-4">
+                                    <span>Netflix</span>
+                                    <span class="text-color--negative">- R$ 54,00</span>
+                                </div>
+                            </div>
+                        </div>
+  
+                        <div class="col-auto d-flex mt-3 mt-sm-0">
+                            <button type="button" title="Editar despesa" class="button me-2 me-sm-3">
+                                <img src="./icons/edit_FILL0_wght400_GRAD0_opsz48.png" alt="">
+                            </button>
+                            <button type="button" title="Excluir despesa" class="button" data-bs-toggle="modal" data-bs-target="#deleteModal_despesa">
+                               <img src="./icons/delete_FILL0_wght400_GRAD0_opsz48.png" alt="">
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="despesas_despesa mt-3">
+                    <p class="d-flex justify-content-between mb-2 font-color-1">Quinta-feira, 14 de Abril <time>22:30</time></p>
+                    <div class="row">
+                        <div class="col-sm">
+                            <div class="card-default position-relative">
+                                <div class="categoria_tag-inline categoria_tag--aluguel position-absolute"></div>
+                                <div class="d-flex justify-content-between p-3 ps-4">
+                                    <span>Aluguel do galpão</span>
+                                    <span class="text-color--negative">- R$ 4.506,00</span>
+                                </div>
+                            </div>
+                        </div>
+  
+                        <div class="col-auto d-flex mt-3 mt-sm-0">
+                            <button type="button" title="Editar despesa" class="button me-2 me-sm-3">
+                                <img src="./icons/edit_FILL0_wght400_GRAD0_opsz48.png" alt="">
+                            </button>
+                            <button type="button" title="Excluir despesa" class="button" data-bs-toggle="modal" data-bs-target="#deleteModal_despesa">
+                               <img src="./icons/delete_FILL0_wght400_GRAD0_opsz48.png" alt="">
+                            </button>
+                        </div>
+                    </div>
+                </div> 
+            </div>
+        </div>
+
+        <div class="row justify-content-center mt-3">
+            <div class="col-lg-8">
+                <p class="d-flex justify-content-between py-3 mes_vigente my-0">MARÇO <span>R$5.000,00</span></p>
+
+                <div class="despesas_despesa mt-3">
+                    <p class="d-flex justify-content-between mb-2 font-color-1">Sábado, 19 de Março <time>13:10</time></p>
+                    <div class="row">
+                        <div class="col-sm">
+                            <div class="card-default position-relative">
+                                <div class="categoria_tag-inline categoria_tag--alimentacao position-absolute"></div>
+                                <div class="d-flex justify-content-between p-3 ps-4">
+                                    <span>McDonald's</span>
+                                    <span class="text-color--negative">- R$ 114,00</span>
+                                </div>
+                            </div>
+                        </div>
+  
+                        <div class="col-auto d-flex mt-3 mt-sm-0">
+                            <button type="button" title="Editar despesa" class="button me-2 me-sm-3">
+                                <img src="./icons/edit_FILL0_wght400_GRAD0_opsz48.png" alt="">
+                            </button>
+                            <button type="button" title="Excluir despesa" class="button" data-bs-toggle="modal" data-bs-target="#deleteModal_despesa">
+                               <img src="./icons/delete_FILL0_wght400_GRAD0_opsz48.png" alt="">
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="despesas_despesa mt-3">
+                    <p class="d-flex justify-content-between mb-2 font-color-1">Quinta-feira, 10 de Março <time>09:48</time></p>
+                    <div class="row">
+                        <div class="col-sm">
+                            <div class="card-default position-relative">
+                                <div class="categoria_tag-inline categoria_tag--saude position-absolute"></div>
+                                <div class="d-flex justify-content-between p-3 ps-4">
+                                    <span>Academia</span>
+                                    <span class="text-color--negative">- R$ 95,00</span>
+                                </div>
+                            </div>
+                        </div>
+  
+                        <div class="col-auto d-flex mt-3 mt-sm-0">
+                            <button type="button" title="Editar despesa" class="button me-2 me-sm-3">
+                                <img src="./icons/edit_FILL0_wght400_GRAD0_opsz48.png" alt="">
+                            </button>
+                            <button type="button" title="Excluir despesa" class="button" data-bs-toggle="modal" data-bs-target="#deleteModal_despesa">
+                               <img src="./icons/delete_FILL0_wght400_GRAD0_opsz48.png" alt="">
+                            </button>
+                        </div>
+                    </div>
+                </div> 
+
+                <div class="despesas_despesa mt-3">
+                    <p class="d-flex justify-content-between mb-2 font-color-1">Quarta-feira, 9 de Março <time>14:15</time></p>
+                    <div class="row">
+                        <div class="col-sm">
+                            <div class="card-default position-relative">
+                                <div class="categoria_tag-inline categoria_tag--aluguel position-absolute"></div>
+                                <div class="d-flex justify-content-between p-3 ps-4">
+                                    <span>Aluguel do galpão</span>
+                                    <span class="text-color--negative">- R$ 4.791,00</span>
+                                </div>
+                            </div>
+                        </div>
+  
+                        <div class="col-auto d-flex mt-3 mt-sm-0">
+                            <button type="button" title="Editar despesa" class="button me-2 me-sm-3">
+                                <img src="./icons/edit_FILL0_wght400_GRAD0_opsz48.png" alt="">
+                            </button>
+                            <button type="button" title="Excluir despesa" class="button" data-bs-toggle="modal" data-bs-target="#deleteModal_despesa">
+                               <img src="./icons/delete_FILL0_wght400_GRAD0_opsz48.png" alt="">
+                            </button>
+                        </div>
+                    </div>
+                </div> 
+            </div>
+        </div>
 
     </main>
 
@@ -132,6 +298,26 @@
         </div>
         <span>Adicionar</span>
     </a>
+
+    <!-- modais -->
+    <div class="modal fade" id="deleteModal_despesa" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="deleteModalLabel">Excluir Despesa</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <div class="modal-body">
+                    Tem certeza que deseja excluir?
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary">Confirmar exclusão</button>
+                </div>
+            </div>
+        </div>
+    </div>          
 
     <script src="./css/bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>  
 </body>

@@ -2,7 +2,7 @@
 
 
 /*---------------------------------------------*\
-    #ROOT AND UTILITIES 
+    #UTILITIES 
 \*---------------------------------------------*/
 :root{
     --font-family-default: 'Inter', sans-serif;
@@ -24,6 +24,17 @@
     --despesa-color: #BB0000;
     --font-color-0: #6d6d6d;
     --font-color-1: #464646;
+    --border-color: #707070;
+    --categoria-color-aluguel: #1000c8;
+    --categoria-color-alimentacao: #F73B28;
+    --categoria-color-lazer: #F7D828;
+    --categoria-color-educacao: #02F774;
+    --categoria-color-transporte: #871FC4;
+    --categoria-color-casa: #FF08F9;
+    --categoria-color-saude: #02CAF8;
+    --categoria-color-8: #CCF702;
+    --categoria-color-9: #AB331B;
+    --categoria-color-10: #81AD69;
 }
 html {
     height: 100%;
@@ -50,15 +61,8 @@ body{
 .tag--negative {
     background-color: var(--despesa-color);
 }
-.categoria {
-    width: .75rem;
-    height: 100%;
-}
-@media (max-width: 575px) {
-    .categoria {
-        width: .5rem;
-    }
-}
+
+
 .font-color-0 {
     color: var(--font-color-0);
 }
@@ -66,21 +70,44 @@ body{
     color: var(--font-color-1);
 }
 
-progress {
-    -webkit-appearance: none;
-    appearance: none;
-    width: 100%;
-    height: calc(.75rem + .25vw);
+.title {
+    font-weight: 600;
+    font-size: calc(1rem + .5vw);;
 }
-progress::-webkit-progress-bar {
+
+.card-default {
+    background-color: white;
+    box-shadow: var(--shadow-default);
+    border-radius: 5px;
     overflow: hidden;
-    background-color: #e6e6e6;
-    border-radius: 50rem;
-    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.25) inset;
+    text-align: center;
 }
-progress::-webkit-progress-value {
-    border-radius: 50rem;
-    background-color: var(--receita-color);
+
+.button {
+    border: 1px solid var(--cta);
+    display: block;
+    padding: .75rem;
+    box-shadow: var(--shadow-default);
+    background-color: white;
+    border-radius: 5px;
+    height: 100%;
+    width: auto;
+}
+.button:hover{
+    box-shadow: var(--shadow-default-hover);
+}
+.button img {
+    height: calc(1.5rem + .3vw);
+    width: calc(1.5rem + .5vw);
+}
+@media (max-width: 575px) {
+    .button {
+        padding: .5rem;
+    }
+}
+
+.mes_vigente {
+    border-bottom: 2px solid #707070 ;
 }
 
 
@@ -237,7 +264,7 @@ progress::-webkit-progress-value {
 }
 .add span {
     position: absolute;
-    top: 0; right: calc(100% - 4rem);
+    top: 0; right: calc(100% - 6rem);
     display: flex;
     align-items: center;
     background-color: var(--cta);
@@ -250,6 +277,7 @@ progress::-webkit-progress-value {
     opacity: 0;
     pointer-events: none;
     transition: all .5s ease;
+    transform: rotateY(60deg);
 }
 .add_circle {
     background-color: var(--cta);
@@ -274,6 +302,7 @@ progress::-webkit-progress-value {
     pointer-events: all;
     right: calc(100% - 2rem);
     border-radius: 2.25rem 0 0 2.25rem;
+    transform: rotateY(0deg);
 }
 
 
@@ -289,13 +318,6 @@ progress::-webkit-progress-value {
 }
 .dashboard_mes {
     margin: 0;
-}
-.dashboard_card{
-    background-color: white;
-    box-shadow: var(--shadow-default);
-    border-radius: 5px;
-    overflow: hidden;
-    text-align: center;
 }
 .dashboard_card > p {
     padding: 0 1rem;
@@ -323,17 +345,77 @@ progress::-webkit-progress-value {
 /*---------------------------------------------*\
     #OBJETIVO
 \*---------------------------------------------*/
-.objetivo_card {
-    background-color: white;
-    box-shadow: var(--shadow-default);
-    border-radius: 5px;
-    overflow: hidden;
-    text-align: center;
-}
-
 .objetivo_valor-atual {
     font-size: calc(.75rem + .1vw);
 }
 .objetivo_percentual {
     font-size: calc(.75rem + .1vw);
+}
+progress {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: calc(.75rem + .25vw);
+}
+progress::-webkit-progress-bar {
+    overflow: hidden;
+    background-color: #e6e6e6;
+    border-radius: 50rem;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.25) inset;
+}
+progress::-webkit-progress-value {
+    border-radius: 50rem;
+    background-color: var(--receita-color);
+}
+
+/*---------------------------------------------*\
+    #DESPESAS
+\*---------------------------------------------*/
+.despesas {
+    margin-top: calc(1rem + 3vw);
+    margin-bottom: calc(1rem + 3vw);
+}
+
+.categoria_tag-inline {
+    width: .75rem;
+    height: 100%;
+}
+.categoria_tag {
+    height: 1rem;
+    width: 3rem;
+    border-radius: 50rem;
+    background-color: red;
+    margin-right: .5rem;
+    display: inline-block;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25);
+}
+    .categoria_tag--aluguel {
+        background-color: var(--categoria-color-aluguel);
+    }
+    .categoria_tag--alimentacao {
+        background-color: var(--categoria-color-alimentacao);
+    }
+    .categoria_tag--lazer {
+        background-color: var(--categoria-color-lazer);
+    }
+    .categoria_tag--educacao {
+        background-color: var(--categoria-color-educacao);
+    }
+    .categoria_tag--transporte {
+        background-color: var(--categoria-color-transporte);
+    }
+    .categoria_tag--casa {
+        background-color: var(--categoria-color-casa);
+    }
+    .categoria_tag--saude {
+        background-color: var(--categoria-color-saude);
+    }
+
+
+/*---------------------------------------------*\
+    #receitas
+\*---------------------------------------------*/
+.receitas {
+    margin-top: calc(1rem + 3vw);
+    margin-bottom: calc(1rem + 3vw);
 }

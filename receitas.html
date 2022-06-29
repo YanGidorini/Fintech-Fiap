@@ -73,9 +73,118 @@
         </div>
     </header>
     
-    <main class="dashboard container">
+    <main class="receitas container-sm">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <p class="title mb-0">Receitas</p>
+            </div>
+        </div>
 
+        <div class="row justify-content-center mt-3">
+            <div class="col-lg-8">
+                <p class="d-flex justify-content-between py-3 mes_vigente my-0">ABRIL <span>R$5.328,00</span></p>
 
+                <div class="despesas_despesa mt-3">
+                    <p class="d-flex justify-content-between mb-2 font-color-1">Sexta-feira, 08 de Abril <time>10:20</time></p>
+                    <div class="row">
+                        <div class="col-sm">
+                            <div class="card-default position-relative">
+                                <div class="d-flex justify-content-between p-3">
+                                    <span>Freelance</span>
+                                    <span class="text-color--positive">+ R$ 600,00</span>
+                                </div>
+                            </div>
+                        </div>
+  
+                        <div class="col-auto d-flex mt-3 mt-sm-0">
+                            <button type="button" title="Editar despesa" class="button me-2 me-sm-3">
+                                <img src="./icons/edit_FILL0_wght400_GRAD0_opsz48.png" alt="">
+                            </button>
+                            <button type="button" title="Excluir despesa" class="button" data-bs-toggle="modal" data-bs-target="#deleteModal_receita">
+                               <img src="./icons/delete_FILL0_wght400_GRAD0_opsz48.png" alt="">
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="despesas_despesa mt-3">
+                    <p class="d-flex justify-content-between mb-2 font-color-1">Terça-feira, 05 de Abril <time>10:20</time></p>
+                    <div class="row">
+                        <div class="col-sm">
+                            <div class="card-default position-relative">
+                                <div class="d-flex justify-content-between p-3">
+                                    <span>Salário</span>
+                                    <span class="text-color--positive">+ R$ 4.728,00</span>
+                                </div>
+                            </div>
+                        </div>
+  
+                        <div class="col-auto d-flex mt-3 mt-sm-0">
+                            <button type="button" title="Editar despesa" class="button me-2 me-sm-3">
+                                <img src="./icons/edit_FILL0_wght400_GRAD0_opsz48.png" alt="">
+                            </button>
+                            <button type="button" title="Excluir despesa" class="button" data-bs-toggle="modal" data-bs-target="#deleteModal_receita">
+                               <img src="./icons/delete_FILL0_wght400_GRAD0_opsz48.png" alt="">
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="row justify-content-center mt-3">
+            <div class="col-lg-8">
+                <p class="d-flex justify-content-between py-3 mes_vigente my-0">MARÇO <span>R$ 4.828,00</span></p>
+
+                <div class="despesas_despesa mt-3">
+                    <p class="d-flex justify-content-between mb-2 font-color-1">Quinta-feira, 10 de Abril <time>10:20</time></p>
+                    <div class="row">
+                        <div class="col-sm">
+                            <div class="card-default position-relative">
+                                <div class="d-flex justify-content-between p-3">
+                                    <span>Presente</span>
+                                    <span class="text-color--positive">+ R$ 100,00</span>
+                                </div>
+                            </div>
+                        </div>
+  
+                        <div class="col-auto d-flex mt-3 mt-sm-0">
+                            <button type="button" title="Editar despesa" class="button me-2 me-sm-3">
+                                <img src="./icons/edit_FILL0_wght400_GRAD0_opsz48.png" alt="">
+                            </button>
+                            <button type="button" title="Excluir despesa" class="button" data-bs-toggle="modal" data-bs-target="#deleteModal_receita">
+                               <img src="./icons/delete_FILL0_wght400_GRAD0_opsz48.png" alt="">
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="despesas_despesa mt-3">
+                    <p class="d-flex justify-content-between mb-2 font-color-1">Segunda-feira, 07 de Abril <time>10:20</time></p>
+                    <div class="row">
+                        <div class="col-sm">
+                            <div class="card-default position-relative">
+                                <div class="d-flex justify-content-between p-3">
+                                    <span>Salário</span>
+                                    <span class="text-color--positive">+ R$ 4.728,00</span>
+                                </div>
+                            </div>
+                        </div>
+  
+                        <div class="col-auto d-flex mt-3 mt-sm-0">
+                            <button type="button" title="Editar despesa" class="button me-2 me-sm-3">
+                                <img src="./icons/edit_FILL0_wght400_GRAD0_opsz48.png" alt="">
+                            </button>
+                            <button type="button" title="Excluir despesa" class="button" data-bs-toggle="modal" data-bs-target="#deleteModal_receita">
+                               <img src="./icons/delete_FILL0_wght400_GRAD0_opsz48.png" alt="">
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
     </main>
 
     <footer class="footer container-fluid d-flex justify-content-between">
@@ -133,7 +242,26 @@
         <span>Adicionar</span>
     </a>
 
+    <!-- modais -->
+    <div class="modal fade" id="deleteModal_receita" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="deleteModalLabel">Excluir Receita</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
 
+                <div class="modal-body">
+                    Tem certeza que deseja excluir?
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary">Confirmar exclusão</button>
+                </div>
+            </div>
+        </div>
+    </div>          
+    
     <script src="./css/bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>  
 </body>
 </html>
