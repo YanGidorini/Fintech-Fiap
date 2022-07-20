@@ -12,7 +12,7 @@
     --icon-size: calc(20px + 1.2vw);
     --target-icon-size: calc(20px + .9vw);
     --spacing-sm: calc(1rem + .2vw);
-    --spacing-md: calc(1rem + 1vw);
+    --spacing-md: calc(1rem + .5vw);
     --spacing-12: 12px;
     --spacing-24: 24px;
     --spacing-36: 36px;
@@ -110,6 +110,10 @@ body{
     border-bottom: 2px solid #707070 ;
 }
 
+a {
+    text-decoration: none;
+}
+
 
 /*---------------------------------------------*\
     #HEADER
@@ -117,11 +121,16 @@ body{
 .header {
     background-color: var(--primary);
     color: white;
-    padding: var(--spacing-sm) var(--spacing-md);
+    padding: var(--spacing-sm) 1rem;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.25);
 }
-.header_nav-item,
-.header_account-photo
+
+.header_nav{
+    display: none;
+    gap: calc(var(--spacing-12) + 1vw);
+}
+
+.header_nav-item
 {
     fill: white;
     height: var(--icon-size);
@@ -131,11 +140,7 @@ body{
     fill: var(--light-cta);
     filter: drop-shadow(var(--glow));
 }
-.header_nav{
-    display: none;
-    gap: calc(var(--spacing-12) + 1vw);
-    justify-content: center;
-}
+
 .header .target{
     fill: none;
     width: var(--target-icon-size);
@@ -147,28 +152,33 @@ body{
 .header .target:hover circle:last-child{
     fill: var(--light-cta);
 }
-.header_account{
-    display: flex;
-    justify-content: end;
-    align-items: center;
-    text-align: end;
-}
+
 .header_account:hover {
     filter: drop-shadow(var(--glow));
 }
-.header_account:hover a{
-    color: var(--light-cta);
-}
-.header_account:hover .header_account-photo{
-    fill: var(--light-cta);
-}
 
-.header_account a{
+a[title="Minha conta"]{
     color: white;
     text-decoration: none;
 }
-.header_account a > span{
+a[title="Minha conta"]:hover{
+    color: var(--light-cta);
+}
+.header_account > span{
     margin-right: calc(var(--spacing-12) - 4.8px);
+}
+.header_account-photo {
+    height: var(--icon-size);
+    width: var(--icon-size);
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+.header_account-photo img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
 }
 
 
