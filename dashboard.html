@@ -85,10 +85,11 @@
         </div>
     </header>
     
-    <main class="dashboard container-sm py-3 py-md-0">
-        <section class="row mt-lg-0 align-items-center justify-content-center">
+    <main class="dashboard container-sm">
+        <div class="row justify-content-center">
             <div class="col-lg-9 col-xl-8">
-                <div class="row gy-2 gy-md-3">
+
+                <section class="row gy-2 gy-md-3 ">
                     <p class="dashboard_mes">MÊS DE ABRIL</p>
 
                     <div class="col-md ">
@@ -141,13 +142,9 @@
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
-        </section>             
-
-        <section class="row mt-5 justify-content-center">
-            <div class="col-lg-9 col-xl-8">
-                <div class="row">
+                </section>             
+        
+                <section class="row mt-5">
                     <div class="col-md">
                         <div class="dashboard_despesa">
                             <p>ÚLTIMA DESPESA</p>
@@ -162,7 +159,7 @@
                         </div>
                     </div>
         
-                    <div class="col-md mt-3 mt-md-0">
+                    <div class="col-md mt-4 mt-md-0">
                         <p>ÚLTIMO OBJETIVO</p>
                         <div class="dashboard_objetivo">
                             <div class="d-flex justify-content-between mb-2">
@@ -176,28 +173,22 @@
                                 <progress value="50" max="100"></progress>
                                 <p class="text-start font-color-0 objetivo_percentual">50%</p>
                             </div>
+                        </div>
+                    </div>
+                </section>
         
+                <section class="mt-5">
+                    <div class="dashboard_investimento">
+                        <p>TOTAL EM INVESTIMENTOS</p>
+                        <div class="dashboard_card card-default py-3 px-4">
+                            <svg class="dashboard_investimento-icon investment" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M5 9.2h3V19H5V9.2zM10.6 5h2.8v14h-2.8V5zm5.6 8H19v6h-2.8v-6z"/></svg>
+                            <span class="ms-3">R$ 4.700,00</span>
                         </div>
                     </div>
-                </div>
-            </div>
-        </section>
+                </section>
 
-        <section class="row mt-5 justify-content-center">
-            <div class="col-lg-9 col-xl-8">
-                <div class="row">
-                    <div class="col-auto me-lg-4 me-xl-1 me-xxl-0">
-                        <div class="dashboard_investimento">
-                            <p>TOTAL EM INVESTIMENTOS</p>
-                            <div class="dashboard_card card-default py-3 px-4">
-                                <svg class="dashboard_investimento-icon investment" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M5 9.2h3V19H5V9.2zM10.6 5h2.8v14h-2.8V5zm5.6 8H19v6h-2.8v-6z"/></svg>
-                                <span class="ms-3">R$ 4.700,00</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
-        </section>
+        </div>
     </main>
 
     <footer class="footer container-fluid">
